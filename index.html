@@ -55,7 +55,7 @@
     if (PUBLIC_TESTFLIGHT_URL) {
       document.getElementById('beta-link').href = PUBLIC_TESTFLIGHT_URL;
     } else {
-      document.getElementById('beta-link').textContent = 'Beta coming soon';
+      document.getElementById('beta-link').textContent = '<a href="https://testflight.apple.com/join/ABCDE123" class="beta-button">Join the Beta on TestFlight</a>';
       document.getElementById('beta-link').classList.add('disabled');
       document.querySelector('.note').textContent = 'External TestFlight link pending approval.';
     }

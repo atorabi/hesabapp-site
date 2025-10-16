@@ -1,64 +1,153 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HesabApp — Receipt Splitter</title>
-  <meta name="description" content="HesabApp makes splitting group receipts fast: scan, auto-detect items & totals, assign to friends, and share via text/email.">
-  <meta property="og:title" content="HesabApp — Receipt Splitter">
-  <meta property="og:description" content="Scan receipts, auto-detect items & totals, split fairly, and share. Join the TestFlight beta!">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/hesab-icon.png">
-  <link rel="icon" type="image/png" href="assets/hesab-icon.png">
-  <link rel="apple-touch-icon" href="assets/hesab-icon.png">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HesabApp</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      margin-top: 60px;
+    }
+
+    img.logo {
+      width: 120px;
+      height: 120px;
+      border-radius: 20px;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-top: 10px;
+    }
+
+    p {
+      font-size: 1.1em;
+      color: #555;
+    }
+
+    .features {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 40px auto;
+      max-width: 900px;
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      width: 260px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #007aff;
+    }
+
+    .beta-button {
+      display: inline-block;
+      padding: 12px 28px;
+      background-color: #007aff;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 18px;
+      margin-top: 20px;
+      transition: background-color 0.2s ease;
+    }
+
+    .beta-button:hover {
+      background-color: #005ecb;
+    }
+
+    .beta-button.disabled {
+      background-color: gray;
+      pointer-events: none;
+    }
+
+    .note {
+      color: #555;
+      margin-top: 10px;
+    }
+
+    footer {
+      margin: 40px 0;
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    footer a {
+      color: #007aff;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-  <main class="wrap">
-    <header class="hero">
-      <div class="logo-wrap">
-        <img src="assets/hesab-icon.png" alt="HesabApp logo">
-      </div>
-      <h1>HesabApp</h1>
-      <p class="tagline">Scan receipts ➜ split fairly ➜ share in seconds.</p>
-      <div class="cta">
-        <a class="btn" href="#" id="beta-link">Join the TestFlight Beta</a>
-        <p class="note">No account required. iOS only.</p>
-      </div>
-    </header>
+  <header>
+    <img src="hesab_logo.png" alt="HesabApp Logo" class="logo">
+    <h1>HesabApp</h1>
+    <p>Scan receipts ➜ split fairly ➜ share in seconds.</p>
 
-    <section class="features">
-      <div class="card">
-        <h3>📷 Scan & Crop</h3>
-        <p>Smart OCR pulls item names, prices, subtotal, tax, tip, and total.</p>
-      </div>
-      <div class="card">
-        <h3>👥 Assign Items</h3>
-        <p>Tap to assign items to friends. Handles unassigned splits automatically.</p>
-      </div>
-      <div class="card">
-        <h3>📤 Share</h3>
-        <p>One-tap text or email summary — with the receipt image attached.</p>
-      </div>
-    </section>
+    <div style="text-align:center; margin-top:30px;">
+      <a id="beta-link" 
+         href="#" 
+         target="_blank" 
+         class="beta-button disabled">
+         Join the Beta on TestFlight
+      </a>
+      <p class="note">External TestFlight link pending approval.</p>
+    </div>
+  </header>
 
-    <footer class="footer">
-      <p>© <span id="year"></span> HesabApp • <a href="mailto:adam@adamtorabi.com">Contact</a></p>
-    </footer>
-  </main>
+  <section class="features">
+    <div class="card">
+      <h3>🧾 Scan & Crop</h3>
+      <p>Smart OCR pulls item names, prices, subtotal, tax, tip, and total.</p>
+    </div>
+    <div class="card">
+      <h3>👥 Assign Items</h3>
+      <p>Tap to assign items to friends. Handles unassigned splits automatically.</p>
+    </div>
+    <div class="card">
+      <h3>📤 Share</h3>
+      <p>One-tap text or email summary — with the receipt image attached.</p>
+    </div>
+  </section>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const PUBLIC_TESTFLIGHT_URL = ''; // paste your TestFlight link when available
-    if (PUBLIC_TESTFLIGHT_URL) {
-      document.getElementById('beta-link').href = PUBLIC_TESTFLIGHT_URL;
-    } else {
-      document.getElementById('beta-link').textContent = '<a href="https://testflight.apple.com/join/ABCDE123" class="beta-button">Join the Beta on TestFlight</a>';
-      document.getElementById('beta-link').classList.add('disabled');
-      document.querySelector('.note').textContent = 'External TestFlight link pending approval.';
-    }
-  </script>
+  <footer>
+    <p>© <span id="year"></span> HesabApp · 
+      <a href="mailto:adam@adamtorabi.com">Contact</a>
+    </p>
+  </footer>
+
+  <script>
+    // Automatically update footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Set your TestFlight public link
+    const PUBLIC_TESTFLIGHT_URL = "https://testflight.apple.com/join/ABCDE123"; // Replace with real link
+
+    if (PUBLIC_TESTFLIGHT_URL) {
+      document.getElementById('beta-link').href = PUBLIC_TESTFLIGHT_URL;
+      document.getElementById('beta-link').classList.remove('disabled');
+      document.querySelector('.note').textContent = "Tap to join the beta on TestFlight!";
+    } else {
+      document.querySelector('.note').textContent = "External TestFlight link pending approval.";
+    }
+  </script>
 </body>
 </html>

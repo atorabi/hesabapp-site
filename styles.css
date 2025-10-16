@@ -1,0 +1,17 @@
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,#f7f7fb, #eef3ff);color:#0b1021}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+.hero{display:flex;flex-direction:column;align-items:center;text-align:center;padding:16px 0 8px 0}
+.logo-wrap{width:84px;height:84px;border-radius:20px;overflow:hidden;box-shadow:0 10px 30px rgba(13,32,120,.15);margin-bottom:14px}
+.logo-wrap img{width:100%;height:100%;object-fit:cover}
+h1{font-weight:800;font-size:40px;letter-spacing:-.02em;margin:4px 0}
+.tagline{font-size:18px;color:#495066;margin:6px 0 18px}
+.cta .btn{display:inline-block;padding:12px 18px;border-radius:12px;text-decoration:none;background:#1a52ff;color:#fff;font-weight:700;box-shadow:0 10px 20px rgba(26,82,255,.25)}
+.cta .btn:hover{transform:translateY(-1px)}
+.cta .btn.disabled{background:#aab4d6;pointer-events:none}
+.note{font-size:13px;color:#6b7280;margin-top:8px}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:34px 0}
+.card{background:#fff;border-radius:14px;padding:18px;box-shadow:0 10px 30px rgba(12,18,40,.06);border:1px solid rgba(13,25,75,.06)}
+.card h3{margin:0 0 8px}
+.footer{margin-top:26px;text-align:center;color:#7b8196;font-size:13px}
+.footer a{color:#1a52ff;text-decoration:none}

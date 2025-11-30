@@ -16,69 +16,39 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="hero">
-  <section class="hero-header">
-    <h1>HESAB – Smart Bill Splitter</h1>
-    <p>Scan receipts, split bills, and send payment requests in seconds.</p>
+  <main class="wrap">
+    <header class="hero">
+      <div class="logo-wrap">
+        <img src="assets/hesab-icon.png" alt="HesabApp logo">
+      </div>
+      <h1>HesabApp</h1>
+      <p class="tagline">Scan receipts ➜ split fairly ➜ share in seconds.</p>
+      <div class="cta">
+        <a class="btn" href="#" id="beta-link">Join the TestFlight Beta</a>
+        <p class="note">No account required. iOS only.</p>
+      </div>
+    </header>
 
-    <!-- TestFlight link -->
-    <a href="https://testflight.apple.com/join/tGH1aR5b" class="primary-button">
-      Join the Beta on TestFlight
-    </a>
-  </section>
+    <section class="features">
+      <div class="card">
+        <h3>📷 Scan & Crop</h3>
+        <p>Smart OCR pulls item names, prices, subtotal, tax, tip, and total.</p>
+      </div>
+      <div class="card">
+        <h3>👥 Assign Items</h3>
+        <p>Tap to assign items to friends. Handles unassigned splits automatically.</p>
+      </div>
+      <div class="card">
+        <h3>📤 Share</h3>
+        <p>One-tap text or email summary — with the receipt image attached.</p>
+      </div>
+    </section>
 
-  <section class="features">
-    <h2>Why HESAB?</h2>
-    <ul>
-      <li><strong>Scan any receipt</strong> – use your iPhone camera or import a photo.</li>
-      <li><strong>Smart cropping</strong> – trim top, bottom, left, and right for clean OCR.</li>
-      <li><strong>Automatic item detection</strong> – HESAB reads prices and builds your bill.</li>
-      <li><strong>Per-person assignment</strong> – tap items to assign them to friends.</li>
-      <li><strong>Tax, tip & “treat someone”</strong> – handles all the math fairly.</li>
-      <li><strong>Professional summary</strong> – share a clean itemized bill image and totals.</li>
-      <li><strong>Venmo links</strong> – send each person a payment link with their exact share.</li>
-    </ul>
-  </section>
+    <footer class="footer">
+      <p>© <span id="year"></span> HesabApp • <a href="mailto:adam@adamtorabi.com">Contact</a></p>
+    </footer>
+  </main>
 
-  <section class="how-it-works">
-    <h2>How It Works</h2>
-    <ol>
-      <li><strong>Scan or import</strong> your receipt.</li>
-      <li><strong>Crop</strong> the image so only the receipt area remains.</li>
-      <li><strong>Review items</strong>, add or edit names and assignments.</li>
-      <li><strong>Adjust tax and tip</strong> if needed.</li>
-      <li><strong>Share</strong> by SMS or email – with receipt + summary + optional Venmo links.</li>
-    </ol>
-  </section>
-
-  <section class="pricing">
-    <h2>Pricing</h2>
-    <p>
-      HESAB includes <strong>20 free scans/imports</strong> so you can try everything.<br>
-      After that, unlock unlimited use for just <strong>$1.99 per year</strong>.
-    </p>
-    <p>No ads. No accounts. All processing stays on your device.</p>
-  </section>
-
-  <section class="cta">
-    <h2>Try HESAB Today</h2>
-    <p>Tap below on your iPhone to install the latest beta.</p>
-    <a href="https://testflight.apple.com/join/ABCDE123" class="primary-button">
-      Join the Beta on TestFlight
-    </a>
-  </section>
-
-  <section class="footer-info">
-    <p>
-      Questions or feedback? Email:
-      <a href="mailto:adam@adamtorabi.com">adam@adamtorabi.com</a>
-    </p>
-    <p>
-      <a href="https://hesab.adamtorabi.com/privacy">Privacy Policy</a>
-    </p>
-  </section>
-</main>
-  
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
     const PUBLIC_TESTFLIGHT_URL = 'https://testflight.apple.com/join/tGH1aR5b'; // paste your TestFlight link when available

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HesabApp — Receipt Splitter</title>
+  <title>HESAB Bill Splitter</title>
   <meta name="description" content="HesabApp makes splitting group receipts fast: scan, auto-detect items & totals, assign to friends, and share via text/email.">
   <meta property="og:title" content="HesabApp — Receipt Splitter">
   <meta property="og:description" content="Scan receipts, auto-detect items & totals, split fairly, and share. Join the TestFlight beta!">
@@ -16,39 +16,83 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="wrap">
-    <header class="hero">
-      <div class="logo-wrap">
-        <img src="assets/hesab-icon.png" alt="HesabApp logo">
-      </div>
-      <h1>HesabApp</h1>
-      <p class="tagline">Scan receipts ➜ split fairly ➜ share in seconds.</p>
-      <div class="cta">
-        <a class="btn" href="#" id="beta-link">Join the TestFlight Beta</a>
-        <p class="note">No account required. iOS only.</p>
-      </div>
-    </header>
 
-    <section class="features">
-      <div class="card">
-        <h3>📷 Scan & Crop</h3>
-        <p>Smart OCR pulls item names, prices, subtotal, tax, tip, and total.</p>
-      </div>
-      <div class="card">
-        <h3>👥 Assign Items</h3>
-        <p>Tap to assign items to friends. Handles unassigned splits automatically.</p>
-      </div>
-      <div class="card">
-        <h3>📤 Share</h3>
-        <p>One-tap text or email summary — with the receipt image attached.</p>
-      </div>
-    </section>
+<main class="wrap">
 
-    <footer class="footer">
-      <p>© <span id="year"></span> HesabApp • <a href="mailto:adam@adamtorabi.com">Contact</a></p>
-    </footer>
-  </main>
+  <!-- HERO SECTION -->
+  <header class="hero">
+    <div class="logo-wrap">
+      <img src="assets/hesab-icon.png" alt="HESAB App logo">
+    </div>
 
+    <h1>HESAB — Smart Bill Splitter</h1>
+    <p class="tagline">
+      Scan receipts • split bills • request payments — instantly.
+    </p>
+
+    <div class="cta">
+      <a class="btn" href="#" id="beta-link">Join the TestFlight Beta</a>
+      <p class="note">iOS only • No account required</p>
+    </div>
+  </header>
+
+  <!-- FEATURES -->
+  <section class="features">
+
+    <div class="card">
+      <h3>📷 Scan & Smart Crop</h3>
+      <p>
+        Auto-detects items, prices, subtotal, tax, tip, and total — with top/bottom & left/right cropping.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🤖 Automatic Item Detection</h3>
+      <p>
+        HESAB reads your receipt and builds a clean digital bill for you.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>👥 Assign Items Easily</h3>
+      <p>
+        Tap to assign items to friends. Unassigned items are split automatically.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🎁 Treat Someone</h3>
+      <p>
+        Mark anyone as “treated” and their share is redistributed fairly among the group.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>💸 Venmo Payment Links</h3>
+      <p>
+        HESAB creates one-tap Venmo links so friends can pay you instantly.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>📤 Share or Save</h3>
+      <p>
+        Send a polished bill summary via SMS or email — with both the receipt
+        image and a clean summary image.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>
+      © <span id="year"></span> HESAB • 
+      <a href="mailto:adam@adamtorabi.com">Contact</a>
+    </p>
+  </footer>
+
+</main>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
     const PUBLIC_TESTFLIGHT_URL = 'https://testflight.apple.com/join/tGH1aR5b'; // paste your TestFlight link when available
